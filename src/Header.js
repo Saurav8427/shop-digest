@@ -20,7 +20,7 @@ const Header = () => {
         <i className="fa-solid fa-user"></i>
         {/* Logo with Shopify Dropdown */}
         <div className="header-logo">
-          <a href="/" className="text-purple-600 text-2xl font-bold">
+          <a href="/" className="text-purple-600 text-2xl font-bold 2xs:text-xl">
             ShopDigest
           </a>
           <div className="shopify-dropdown">

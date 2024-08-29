@@ -9,7 +9,7 @@
   }
   
   .collections-title {
-    @apply text-2xl font-bold text-left;
+    @apply text-2xl font-bold text-left 2xs:text-xl;
   }
   
   .see-all-link {
@@ -17,7 +17,7 @@
   }
   
   .collections-description {
-    @apply text-gray-600 mb-8 text-left;
+    @apply text-gray-600 mb-8 text-left 2xs:text-sm;
   }
   
   .collections-grid {
@@ -29,11 +29,11 @@
   }
   
   .collection-card-title {
-    @apply font-bold text-left mb-2 text-lg;
+    @apply font-bold text-left mb-2 text-lg 2xs:text-base;
   }
   
   .collection-card-description {
-    @apply text-gray-600 text-left mb-4 text-base;
+    @apply text-gray-600 text-left mb-4 text-base 2xs:text-sm;
   }
   
   .divider {
@@ -53,15 +53,15 @@
   }
   
   .collection-card-apps {
-    @apply font-medium text-emerald-400;
+    @apply font-medium text-emerald-400 2xs:text-sm;
   }
   
   .collection-card-button {
-    @apply bg-black text-white py-1 px-3 rounded-full hover:bg-gray-800 transition duration-200;
+    @apply bg-black text-white py-1 px-3 rounded-full hover:bg-gray-800 transition duration-200 2xs:text-sm;
   }
   
   .pagination-container {
-    @apply flex items-center justify-between mt-6 border border-gray-300 p-3 rounded-md;
+    @apply flex items-center justify-between mt-6 border border-gray-300 p-3 rounded-md 2xs:text-xs p-2;
   }
   
   .pagination-summary {
