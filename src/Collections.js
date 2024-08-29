@@ -6,8 +6,8 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 const Collections = () => {
   const [collections, setCollections] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(10);
   const [showAll, setShowAll] = useState(false);
+  const itemsPerPage = 10;
 
   // Fetching data from the fake API
   useEffect(() => {
