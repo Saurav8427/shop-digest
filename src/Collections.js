@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "./Collections.css"; // Import the CSS file
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight,faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 const Collections = () => {
   const [collections, setCollections] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -99,14 +99,14 @@ const Collections = () => {
 
           <div className="pagination">
             <button
-              className="pagination-button"
+              className="pagination-button-prev"
               onClick={() => paginate(currentPage - 1)}
               disabled={currentPage === 1}
             >
               Previous
             </button>
 
-            <div className="pagination-numbers">
+            {/* <div className="pagination-numbers">
               <button
                 className="pagination-arrow"
                 onClick={() => paginate(Math.max(currentPage - 1, 1))}
@@ -134,16 +134,45 @@ const Collections = () => {
               >
                 &gt;
               </button>
-            </div>
+            </div> */}
 
             <button
-              className="pagination-button"
+              className="pagination-button-next"
               onClick={() => paginate(currentPage + 1)}
               disabled={currentPage === totalPages}
             >
               Next
             </button>
           </div>
+						<div className="pagination-numbers">
+              <button
+                className="pagination-arrow-left"
+                onClick={() => paginate(Math.max(currentPage - 1, 1))}
+                disabled={currentPage === 1}
+              >
+                <FontAwesomeIcon icon={faAngleLeft} />
+              </button>
+
+              {[...Array(totalPages)].map((_, index) => (
+                <button
+                  key={index + 1}
+                  className={`pagination-number ${
+                    currentPage === index + 1 ? "pagination-active" : ""
+                  }`}
+                  onClick={() => paginate(index + 1)}
+                >
+                  {index + 1}
+                </button>
+              ))}
+
+              <button
+                className="pagination-arrow-right"
+                onClick={() => paginate(Math.min(currentPage + 1, totalPages))}
+                disabled={currentPage === totalPages}
+              >
+                <FontAwesomeIcon icon={faAngleRight} />
+              </button>
+            </div>
         </div>
       )}
     </div>

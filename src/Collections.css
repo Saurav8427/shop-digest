@@ -61,30 +61,36 @@
   }
   
   .pagination-container {
-    @apply flex items-center justify-between mt-6 border border-gray-300 p-3 rounded-md 2xs:text-xs p-2;
+    @apply flex justify-between mt-6 border border-gray-300 p-3 rounded-md 2xs:text-xs p-2;
   }
   
   .pagination-summary {
-    @apply text-gray-600 xs:hidden 2xs:hidden;
+    @apply text-gray-600 pt-1 xs:hidden 2xs:hidden;
   }
   
   .pagination {
-    @apply flex items-center space-x-2 xs:ml-auto xs:mr-auto 2xs:ml-auto 2xs:mr-auto;
+    /* @apply flex items-center space-x-2 xs:ml-auto xs:mr-auto 2xs:ml-auto 2xs:mr-auto; */
   }
   
-  .pagination-button {
-    @apply border border-gray-300 rounded-md px-3 py-1 text-gray-700 hover:bg-gray-200 2xs:hidden;
+  .pagination-button-prev {
+    @apply border border-gray-300 rounded-l-lg px-3 py-1 text-gray-700 hover:bg-gray-200 2xs:hidden;
   }
-  .pagination-arrow {
-    @apply border border-gray-300 rounded-md px-3 py-1 text-gray-700 hover:bg-gray-200;
+  .pagination-button-next {
+    @apply border border-gray-300 rounded-r-lg px-3 py-1 text-gray-700 hover:bg-gray-200 2xs:hidden;
+  }
+  .pagination-arrow-left {
+    @apply border border-gray-300 rounded-l-lg px-3 py-1 text-gray-700 hover:bg-gray-200;
+  }
+  .pagination-arrow-right {
+    @apply border border-gray-300 rounded-r-lg px-3 py-1 text-gray-700 hover:bg-gray-200;
   }
   
   .pagination-number {
-    @apply border rounded-md px-3 py-1 text-gray-700 hover:bg-gray-200;
+    @apply border px-3 py-1 border text-gray-700 hover:bg-gray-200;
   }
   
   .pagination-numbers {
-    @apply flex items-center space-x-2 ml-auto; /* Aligns page numbers to the rightmost */
+    @apply flex items-center 2xs:mr-auto 2xs:ml-auto; /* Aligns page numbers to the rightmost */
   }
   
   .pagination-active {
