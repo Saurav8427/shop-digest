@@ -47,7 +47,7 @@
   }
   
   .add-post-button {
-    @apply px-4 py-2 text-white bg-purple-600 rounded-md hover:bg-purple-700;
+    @apply px-4 py-2 text-white bg-purple-600 rounded-md hover:bg-purple-700 2xs:hidden;
   }
   
   .burger-menu {
